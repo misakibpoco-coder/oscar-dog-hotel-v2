@@ -9,9 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Set these in GitHub -> Settings -> Secrets and variables -> Actions (NEW V2 values only)
-      VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-      VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+      # V2 Supabase project (nvexxhbiyizwaskzzmgh). The publishable key is a public
+      # client key (it ships inside every APK). Repository secrets, if set, override these.
+      VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://nvexxhbiyizwaskzzmgh.supabase.co' }}
+      VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || 'sb_publishable_xTHbBPwPMDbqBmf37JCIGA_pRfxjNWO' }}
 
     steps:
       - name: Checkout repository
