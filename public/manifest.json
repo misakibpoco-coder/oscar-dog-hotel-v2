@@ -1,0 +1,21 @@
+{
+  "short_name": "Oscar Hotel",
+  "name": "Oscar Dog Hotel - Management & Reservation",
+  "icons": [
+    {
+      "src": "/assets/hotel_logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/hotel_logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f3f9ff",
+  "theme_color": "#f3f9ff",
+  "display": "standalone",
+  "orientation": "portrait"
+}

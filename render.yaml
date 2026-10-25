@@ -1,0 +1,30 @@
+# Oscar Dog Hotel V2 — optional Express backend on Render.
+# NOTE: the mobile app talks to Supabase directly and does NOT need this service.
+# All secret values are set in the Render dashboard (sync: false), never in git.
+services:
+  - type: web
+    name: oscar-dog-hotel-v2-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: HOTEL_TIMEZONE
+        value: Europe/Nicosia
+      - key: CORS_ORIGIN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_REFRESH_SECRET
+        sync: false
+      - key: BACKUP_ENCRYPTION_KEY
+        sync: false
